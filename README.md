@@ -54,17 +54,17 @@ O sistema tem duas partes:
 - Painel lista todos os cadastros, ordenados por data, com indicação visual de status
 - Logout funcional
 
-### ✨ Além do mínimo
-- 🌗 **Tema claro/escuro**, com preferência salva no navegador
-- 🌍 **Tradução completa** da interface em Português e Inglês (incluindo mensagens de validação)
-- 🔀 **Ordenação clicável** em qualquer coluna da tabela do painel
-- ✅❌ **Aceitar/rejeitar cadastros** diretamente no painel, com notificação automática por email ao sócio
-- 📧 **Notificação por email real**: suporte a envio via SMTP (Gmail) documentado abaixo, além do driver `log` padrão para ambiente de desenvolvimento sem depender de credenciais externas
-- 📊 **Gráficos interativos** (sócios confirmados por plano e por setor), com efeito de destaque ao passar o mouse
-- 🛠️ **Gerenciamento de Planos e Setores pelo admin**: criar, editar, ativar/desativar planos (com benefícios e opção de destaque "Mais popular") e setores do estádio — mudanças refletem automaticamente na página pública
-- 🚫 **Prevenção de cadastro duplicado** por email
-- 🎨 **Identidade visual própria**, com paleta e tipografia inspiradas no clube, fundo animado com padrão de escudos, e layout responsivo (desktop e mobile)
-- 🔒 **Segurança**: proteção anti-spam (honeypot), limite de tentativas de envio do formulário público (rate limiting), remoção da rota pública de registro (evitando criação não autorizada de contas administrativas), e cabeçalhos HTTP de segurança (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`)
+### Além do mínimo
+- **Tema claro/escuro**, com preferência salva no navegador
+- **Tradução completa** da interface em Português e Inglês (incluindo mensagens de validação)
+- **Ordenação clicável** em qualquer coluna da tabela do painel
+- **Aceitar/rejeitar cadastros** diretamente no painel, com notificação automática por email ao sócio
+- **Notificação por email real**: suporte a envio via SMTP (Gmail) documentado abaixo, além do driver `log` padrão para ambiente de desenvolvimento sem depender de credenciais externas
+- **Gráficos interativos** (sócios confirmados por plano e por setor), com efeito de destaque ao passar o mouse
+- **Gerenciamento de Planos e Setores pelo admin**: criar, editar, ativar/desativar planos (com benefícios e opção de destaque "Mais popular") e setores do estádio — mudanças refletem automaticamente na página pública
+- **Prevenção de cadastro duplicado** por email
+- **Identidade visual própria**, com paleta e tipografia inspiradas no clube, fundo animado com padrão de escudos, e layout responsivo (desktop e mobile)
+- **Segurança**: proteção anti-spam (honeypot), limite de tentativas de envio do formulário público (rate limiting), remoção da rota pública de registro (evitando criação não autorizada de contas administrativas), e cabeçalhos HTTP de segurança (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`)
 
 > Mais detalhes e o raciocínio por trás de cada decisão estão em [`DECISOES.md`](./DECISOES.md).
 
@@ -142,9 +142,9 @@ Antes de rodar o projeto, tenha instalado:
 
 | Ferramenta | Versão usada no desenvolvimento |
 |---|---|
-| 🐘 PHP | 8.2.12 ou superior |
-| 📦 Composer | 2.10.3 ou superior |
-| 🟢 Node.js | v24.14.1 ou superior (o `npm` já vem junto) |
+| PHP | 8.2.12 ou superior |
+| Composer | 2.10.3 ou superior |
+| Node.js | v24.14.1 ou superior (o `npm` já vem junto) |
 
 > Não é necessário instalar o Laravel separadamente — o framework já vem incluso nas dependências do projeto (`composer.json`) e é baixado automaticamente no passo `composer install` abaixo.
 
@@ -187,7 +187,7 @@ php artisan serve
 
 Acesse **http://127.0.0.1:8000** para ver a página pública.
 
-> 💡 Durante o desenvolvimento, é mais prático rodar `npm run dev` num terminal separado em vez de `npm run build` — ele recompila o CSS/JS automaticamente a cada alteração.
+> Durante o desenvolvimento, é mais prático rodar `npm run dev` num terminal separado em vez de `npm run build` — ele recompila o CSS/JS automaticamente a cada alteração.
 
 ### 🔑 Criar o usuário administrador
 
@@ -244,7 +244,7 @@ php artisan config:clear
 
 Cadastre um sócio ou aprove/rejeite um cadastro existente pelo dashboard — o e-mail deve chegar de verdade na caixa de entrada informada.
 
-> 💡 Para times/produção, o recomendado é usar um serviço dedicado de e-mail transacional (ex: [Mailtrap](https://mailtrap.io) para testes, ou [Amazon SES](https://aws.amazon.com/ses/)/[Postmark](https://postmarkapp.com)/[Resend](https://resend.com) para produção) em vez de uma conta pessoal do Gmail.
+> Para times/produção, o recomendado é usar um serviço dedicado de e-mail transacional (ex: [Mailtrap](https://mailtrap.io) para testes, ou [Amazon SES](https://aws.amazon.com/ses/)/[Postmark](https://postmarkapp.com)/[Resend](https://resend.com) para produção) em vez de uma conta pessoal do Gmail.
 
 ---
 
